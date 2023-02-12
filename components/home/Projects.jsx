@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+/* image */
+import tetrix from "../../assets/tetrix.png";
+import movie from "../../assets/movinime.png";
+import numle from "../../assets/numle.png";
+import twitterClone from "../../assets/twitterClone.png";
 
 export default function Projects({ className }) {
   return (
@@ -29,9 +34,11 @@ function Project({ project, index }) {
       </div>
       <article>
         <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
-        <hr className="w-[50%] mb-3"/>
+        <hr className="w-[50%] mb-3" />
         <p className="mb-6">{description}</p>
-        <Image src={image} width={500} height={300} alt={`${title}`}/>
+        <a href={link} target="_blank" rel="noreferrer">
+          <Image src={image} width={500} height={300} alt={`${title}`}  className="max:h-[300px]"/>
+        </a>
       </article>
     </li>
   );
@@ -42,12 +49,12 @@ const projects = [
     title: "Twitter Clone",
     description:
       "A twitter clone built with Next.js, Tailwind, Firebase and Redux",
-    image: "/images/twitter-clone.png",
+    image: twitterClone,
     link: "https://vu-witter.netlify.app/",
     github: "https://www.github.com/vubere/vwitter",
     tags: ["React.ts", "TypeScript", "Tailwind", "Firebase", "contextAPI"],
   },
-  {
+  /* {
     title: "Portfolio",
     description:
       "My portfolio built with Next.js, Tailwind, Firebase and Redux",
@@ -55,29 +62,29 @@ const projects = [
     link: "https://victorubere.netlify.app/",
     github: "https://www.github.com/vubere/portfolio",
     tags: ["nextjs", "Tailwind", "framer-motion", "contextAPI"],
-  },
+  }, */
   {
     title: "Numle",
     description:
       "A wordle clone number guessing game built with React.js, scss and Redux",
-    image: "/images/numle.png",
-    link: "https://vu-numle.netlify.app/",
+    image: numle,
+    link: "https://numle.netlify.app/",
     github: "https://www.github.com/vubere/numle",
     tags: ["React.js", "Redux", "scss"],
   },
   {
     title: "Movie App",
     description: "A movie app built with React.js, Tailwind and Redux",
-    image: "/images/movie-app.png",
-    link: "https://vu-movie-app.netlify.app/",
+    image: movie,
+    link: "https://movinime.netlify.app/",
     github: "https://www.github.com/vubere/movie-app",
     tags: ["React.ts", "scss", "Redux"],
   },
   {
     title: "tetris",
     description: "A tetris game built with React.js, Tailwind and Redux",
-    image: "/images/tetris.png",
-    link: "https://vu-tetris.netlify.app/",
+    image: tetrix,
+    link: "https://vutetrix.netlify.app/",
     github: "https://www.github.com/vubere/tetris",
     tags: ["JavaScript", "css"],
   },
