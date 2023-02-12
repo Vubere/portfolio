@@ -1,0 +1,84 @@
+import Image from "next/image";
+
+
+export default function Projects({ className }) {
+  return (
+    <ul
+      className={`lg:max-h-[698px] shadow-[0_0_0_2px_rgba(0,0,0,0.3)] overflow-auto ${className}`}
+    >
+      {projects.map((project, i) => (
+        <Project key={i} project={project} index={i} />
+      ))}
+    </ul>
+  );
+}
+
+function Project({ project, index }) {
+  const { title, description, image, link, github, tags } = project;
+  const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
+
+  return (
+    <li className="p-5 ">
+      <div className="flex items-center gap-1 mb-10">
+        <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
+          <p className="transform rotate-[-45deg] text-[18px] font-[700]">
+            {indexFormat}
+          </p>
+        </div>
+        <hr className="w-[300px] max:w-[70vw] h-0 border  " />
+      </div>
+      <article>
+        <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
+        <hr className="w-[50%] mb-3"/>
+        <p className="mb-6">{description}</p>
+        <Image src={image} width={500} height={300} alt={`${title}`}/>
+      </article>
+    </li>
+  );
+}
+
+const projects = [
+  {
+    title: "Twitter Clone",
+    description:
+      "A twitter clone built with Next.js, Tailwind, Firebase and Redux",
+    image: "/images/twitter-clone.png",
+    link: "https://vu-witter.netlify.app/",
+    github: "https://www.github.com/vubere/vwitter",
+    tags: ["React.ts", "TypeScript", "Tailwind", "Firebase", "contextAPI"],
+  },
+  {
+    title: "Portfolio",
+    description:
+      "My portfolio built with Next.js, Tailwind, Firebase and Redux",
+    image: "/images/portfolio.png",
+    link: "https://victorubere.netlify.app/",
+    github: "https://www.github.com/vubere/portfolio",
+    tags: ["nextjs", "Tailwind", "framer-motion", "contextAPI"],
+  },
+  {
+    title: "Numle",
+    description:
+      "A wordle clone number guessing game built with React.js, scss and Redux",
+    image: "/images/numle.png",
+    link: "https://vu-numle.netlify.app/",
+    github: "https://www.github.com/vubere/numle",
+    tags: ["React.js", "Redux", "scss"],
+  },
+  {
+    title: "Movie App",
+    description: "A movie app built with React.js, Tailwind and Redux",
+    image: "/images/movie-app.png",
+    link: "https://vu-movie-app.netlify.app/",
+    github: "https://www.github.com/vubere/movie-app",
+    tags: ["React.ts", "scss", "Redux"],
+  },
+  {
+    title: "tetris",
+    description: "A tetris game built with React.js, Tailwind and Redux",
+    image: "/images/tetris.png",
+    link: "https://vu-tetris.netlify.app/",
+    github: "https://www.github.com/vubere/tetris",
+    tags: ["JavaScript", "css"],
+  },
+];
