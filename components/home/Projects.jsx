@@ -37,7 +37,7 @@ function Project({ project, index }) {
         <hr className="w-[50%] mb-3" />
         <p className="mb-6">{description}</p>
         <a href={link} target="_blank" rel="noreferrer">
-          <div className="relative ">
+          <div className="relative inline">
             <Image
               src={image}
               width={500}
