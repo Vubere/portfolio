@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       y: "-100vh"
     },
   };
-  console.log(router.route)
+  
 
   return (
     <Layout>
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
           animate="animateLoad"
           exit="exitLoad"
           transition={{
-            duration: 0.5,
+            duration: 0.4,
           }}
           variants={variants}
         >

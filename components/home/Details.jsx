@@ -7,8 +7,8 @@ export default function Details({className}) {
   
   return (
     <main className={`overflow-auto lg:max-h-[698px] w-full ${className}`}>
-      <div className="overflow-hidden h-[300px]  flex items-center">
-        <Image src={hero} className='w-[100vw] h-[100%]' alt="hero" />
+      <div className="overflow-hidden h-[300px]  flex items-center relative">
+        <Image src={hero} className='absolute w-[100vw] h-[100%] z-[0]' alt="hero" />
       </div>
       <article className="p-6">
         <h3 className="font-[700] text-[38px] leading-[42px] lg:text-[58px] leading-[60px] md:text-[48px] md:leading-[50px] mb-4">Hi there! I am Victor Ubere</h3>

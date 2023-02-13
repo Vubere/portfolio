@@ -1,12 +1,17 @@
 import Link from "next/link";
 
-export default function header() {
+export default function header({show, showSideNav, width}) {
+
+
+
   return (
-    <header className="p-3 shadow-[0px_2px_0px_0px_rgba(0,0,0,0.1)] flex justify-between w-full h-[70px] items-center fixed top-0 left-0 bg-white z-[99999]">
+    <header className="p-3 shadow-[0px_2px_0px_0px_rgba(0,0,0,0.1)] flex justify-between w-full h-[70px] items-center fixed top-0 left-0 bg-white z-[999]">
       <h1 className="font-[600] text-[15px]">
         Victor Ubere{"  "}|{"  "}Frontend Engineer
       </h1>
-      <nav>
+      {
+        width>600?
+        <nav>
         <ul className="flex items-center justify-center gap-4 pr-4 font-[500]">
           <li>
             <Link href={"/"}>Home</Link>
@@ -20,7 +25,11 @@ export default function header() {
             </li>
           </Link>
         </ul>
-      </nav>
+      </nav>:<div className="w-[30px] h-[30px] bg-black" onClick={()=>showSideNav(!show)}></div>
+      }
+      {
+
+      }
     </header>
   );
 }

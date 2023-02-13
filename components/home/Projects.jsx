@@ -37,7 +37,15 @@ function Project({ project, index }) {
         <hr className="w-[50%] mb-3" />
         <p className="mb-6">{description}</p>
         <a href={link} target="_blank" rel="noreferrer">
-          <Image src={image} width={500} height={300} alt={`${title}`}  className="max:h-[300px]"/>
+          <div className="relative ">
+            <Image
+              src={image}
+              width={500}
+              height={300}
+              alt={`${title}`}
+              className="max:h-[300px]"
+            />
+          </div>
         </a>
       </article>
     </li>
