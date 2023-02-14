@@ -6,6 +6,7 @@ import tetrix from "../../assets/tetrix.png";
 import movie from "../../assets/movinime.png";
 import numle from "../../assets/numle.png";
 import twitterClone from "../../assets/twitterClone.png";
+import { useState } from "react";
 
 export default function Projects({ className }) {
   return (
@@ -22,6 +23,16 @@ export default function Projects({ className }) {
 function Project({ project, index }) {
   const { title, description, image, link, github, tags } = project;
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
+  const [show, setShow] = useState(false)
+
+  const visibilityVariants = {
+    show: {
+      opacity: 1
+    },
+    hide: {
+      opacity: 0
+    }
+  }
 
   return (
     <motion.li
@@ -34,10 +45,13 @@ function Project({ project, index }) {
         opacity: 1,
         scale: 1,
 
-        amount: 100,
         transition: {
           duration: 0.6,
         },
+      }}
+      viewport={{
+        amount: 0.5,
+        once: true
       }}
     >
       <div className="flex items-center gap-1 mb-10">
@@ -61,13 +75,12 @@ function Project({ project, index }) {
           />
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-[#fff8] flex items-center justify-center gap-2"
-            initial={{
-              opacity: 0,
-            }}
+            animate={show?'show':'hide'}
             whileHover={{
               opacity: 1,
             }}
-            drag
+            variants={visibilityVariants}
+            onClick={()=>setShow(!show)}
           >
             <a
               href={link}
@@ -137,7 +150,7 @@ const projects = [
   },
   {
     title: "MetaBnb",
-    description: "Responsive web app made with react and css",
+    description: "Responsive landing page made with react and css",
     image: "",
     link: "",
     github: "",
