@@ -24,20 +24,21 @@ function Project({ project, index }) {
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
 
   return (
-    <motion.li className="p-5 "
-    initial={{
-      opacity: 0.3,
-      scale: 0.7,
-    }}
-    whileInView={{
-      opacity: 1,
-      scale: 1,
-      once: true,
-      amount: "all",
-      transition:{
-        duration: 0.6
-      }
-    }}
+    <motion.li
+      className="p-5 "
+      initial={{
+        opacity: 0.3,
+        scale: 0.7,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+
+        amount: 100,
+        transition: {
+          duration: 0.6,
+        },
+      }}
     >
       <div className="flex items-center gap-1 mb-10">
         <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
@@ -51,17 +52,41 @@ function Project({ project, index }) {
         <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
         <hr className="w-[50%] mb-3" />
         <p className="mb-6">{description}</p>
-        <a href={link} target="_blank" rel="noreferrer">
-          <div className="relative inline">
-            <Image
-              src={image}
-          
-              height={300}
-              alt={`${title}`}
-              className="max-h-[300px] w-[90vw] md:max-w-[400px] lg:max-w-[250px]"
-            />
-          </div>
-        </a>
+        <motion.div className="relative inline">
+          <Image
+            src={image}
+            height={300}
+            alt={`${title}`}
+            className="max-h-[300px] w-[90vw] md:max-w-[400px] lg:max-w-[250px]"
+          />
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-[#fff8] flex items-center justify-center gap-2"
+            initial={{
+              opacity: 0,
+            }}
+            whileHover={{
+              opacity: 1,
+            }}
+            drag
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="border p-4 py-1 bg-white font-[500] shadow-[1px_1px_1px_1px_rgba(0,0,0,0.3)] rounded-full underline"
+            >
+              Visit
+            </a>
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="border p-4 py-1 bg-white font-[500] shadow-[1px_1px_1px_1px_rgba(0,0,0,0.3)] rounded-full underline"
+            >
+              Github
+            </a>
+          </motion.div>
+        </motion.div>
       </article>
     </motion.li>
   );
@@ -77,15 +102,6 @@ const projects = [
     github: "https://www.github.com/vubere/vwitter",
     tags: ["React.ts", "TypeScript", "Tailwind", "Firebase", "contextAPI"],
   },
-  /* {
-    title: "Portfolio",
-    description:
-      "My portfolio built with Next.js, Tailwind, Firebase and Redux",
-    image: "/images/portfolio.png",
-    link: "https://victorubere.netlify.app/",
-    github: "https://www.github.com/vubere/portfolio",
-    tags: ["nextjs", "Tailwind", "framer-motion", "contextAPI"],
-  }, */
   {
     title: "Numle",
     description:
@@ -111,4 +127,36 @@ const projects = [
     github: "https://www.github.com/vubere/tetris",
     tags: ["JavaScript", "css"],
   },
+  {
+    title: "WillCreator",
+    description: "Collaborative work done with  github @DrieOx. Responsive web app made with react, contextAPI and css",
+    image: "",
+    link: "",
+    github: "",
+    tags: ["React, css", "contextAPI"],
+  },
+  {
+    title: "MetaBnb",
+    description: "Responsive web app made with react and css",
+    image: "",
+    link: "",
+    github: "",
+    tags: ["React, css"],
+  },
+  {
+    title: "react calculator",
+    description: "Calcultor made with react",
+    image: "",
+    link: "",
+    github: "",
+    tag: ["react", "css"],
+  },
+  {
+    title: 'TicTacToe',
+    description: "A game of TicTacToe, with dummy AI, made with JavaScript and css.",
+    image: "",
+    link: "",
+    github: "",
+    tags: ["JavaScript", "Css"]
+  }
 ];
