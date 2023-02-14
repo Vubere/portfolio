@@ -15,7 +15,7 @@ export default function Home() {
         <title>Victor Ubere</title>
         <meta
           name="description"
-          content="Victor Ubere's portfolio. Victor is a frontend web developer with knowledge in html5, css,tailwind, javascript, typescript, react, redux, nextjs, "
+          content="Victor Ubere's portfolio. Victor is a frontend web developer with knowledge in html5, css, tailwind, javascript, typescript, react, redux, nextjs "
         />
       </Head>
 

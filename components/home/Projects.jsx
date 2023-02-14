@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 /* image */
 import tetrix from "../../assets/tetrix.png";
@@ -9,7 +10,7 @@ import twitterClone from "../../assets/twitterClone.png";
 export default function Projects({ className }) {
   return (
     <ul
-      className={`lg:max-h-[698px] shadow-[0_0_0_2px_rgba(0,0,0,0.3)] overflow-auto ${className}`}
+      className={`lg:max-h-[698px] shadow-[0_0_0_2px_rgba(0,0,0,0.3)] pb-12 overflow-auto ${className}`}
     >
       {projects.map((project, i) => (
         <Project key={i} project={project} index={i} />
@@ -23,7 +24,21 @@ function Project({ project, index }) {
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
 
   return (
-    <li className="p-5 ">
+    <motion.li className="p-5 "
+    initial={{
+      opacity: 0.3,
+      scale: 0.7,
+    }}
+    whileInView={{
+      opacity: 1,
+      scale: 1,
+      once: true,
+      amount: "all",
+      transition:{
+        duration: 0.6
+      }
+    }}
+    >
       <div className="flex items-center gap-1 mb-10">
         <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
           <p className="transform rotate-[-45deg] text-[18px] font-[700]">
@@ -40,15 +55,15 @@ function Project({ project, index }) {
           <div className="relative inline">
             <Image
               src={image}
-              width={500}
+          
               height={300}
               alt={`${title}`}
-              className="max:h-[300px]"
+              className="max-h-[300px] w-[90vw] md:max-w-[400px] lg:max-w-[250px]"
             />
           </div>
         </a>
       </article>
-    </li>
+    </motion.li>
   );
 }
 
