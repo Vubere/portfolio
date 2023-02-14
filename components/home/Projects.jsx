@@ -71,7 +71,7 @@ function Project({ project, index }) {
             src={image}
             height={300}
             alt={`${title}`}
-            className="max-h-[300px] w-[90vw] md:max-w-[400px] lg:max-w-[250px]"
+            className="max-h-[300px] w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px]"
           />
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-[#fff8] flex items-center justify-center gap-2"
