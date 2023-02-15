@@ -7,6 +7,7 @@ import movie from "../../assets/movinime.png";
 import numle from "../../assets/numle.png";
 import twitterClone from "../../assets/twitterClone.png";
 import { useState } from "react";
+import { useCloseOnBlur } from "../../helpers/useCloseonClickAway";
 
 export default function Projects({ className }) {
   return (
@@ -22,8 +23,8 @@ export default function Projects({ className }) {
 
 function Project({ project, index }) {
   const { title, description, image, link, github, tags } = project;
+  const {ref, show, setShow} =  useCloseOnBlur()
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
-  const [show, setShow] = useState(false)
 
   const visibilityVariants = {
     show: {
@@ -38,7 +39,7 @@ function Project({ project, index }) {
     <motion.li
       className="p-5 "
       initial={{
-        opacity: 0.3,
+        opacity: 0,
         scale: 0.7,
       }}
       whileInView={{
@@ -51,7 +52,7 @@ function Project({ project, index }) {
       }}
       viewport={{
         amount: 0.5,
-        once: true
+        once: true,
       }}
     >
       <div className="flex items-center gap-1 mb-10">
@@ -66,21 +67,23 @@ function Project({ project, index }) {
         <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
         <hr className="w-[50%] mb-3" />
         <p className="mb-6">{description}</p>
-        <motion.div className="relative inline">
+        <motion.div className="relative inline w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px]">
           <Image
             src={image}
             height={300}
+            width={250}
             alt={`${title}`}
             className="max-h-[300px] w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px]"
           />
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#fff8] flex items-center justify-center gap-2"
-            animate={show?'show':'hide'}
+            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px]"
+            animate={show ? "show" : "hide"}
             whileHover={{
               opacity: 1,
             }}
             variants={visibilityVariants}
-            onClick={()=>setShow(!show)}
+            onClick={() => setShow(!show)}
+            ref={ref}
           >
             <a
               href={link}
