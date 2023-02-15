@@ -16,7 +16,7 @@ export default function Aside({ className }) {
                 x: 100 * i,
               }}
               transition={{
-                delay: 0.2*i,
+                delay: 0.03*i,
                 duration: 0.3,
               }}
               animate={{
@@ -38,19 +38,18 @@ export default function Aside({ className }) {
               key={i}
               initial={{
                 opacity: 0,
-                x: 100,
+                x: 100 * i,
               }}
               transition={{
-                delay: 0.2*i,
+                delay: 0.01*i,
                 duration: 0.8 ,
               }}
-              whileInView={{
+              animate={{
                 opacity: 1,
                 x: 0,
               }}
               viewport={{
-                once: true,
-                amount: "all",
+                once: true
               }}
               className="border rounded-full p-1 pl-2 pr-2 inline-flex items-center justify-center text-center shadow-[2px_2px_2px_2px_rgba(0,0,0)] m-2 mb-4 text-black "
             >

@@ -22,8 +22,10 @@ export default function Details({ className }) {
             }}
             options={{
               loop: false,
-              strings: ["Hello there, I am Victor Ubere."],
+              strings: ["Hello there, I am Victor Ubere"],
               autoStart: false,
+              cursor: "",
+              
             }}
           />
         </h2>
