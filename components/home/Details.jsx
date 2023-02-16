@@ -14,7 +14,7 @@ export default function Details({ className }) {
       </div>
       <article className="p-6">
         <h2 className="font-[700] text-[38px] leading-[42px] lg:text-[58px] leading-[60px] md:text-[48px] md:leading-[50px] mb-4">
-          <TypewriterComponent
+          {/* <TypewriterComponent
             onInit={(typewriter) => {
               typewriter
                 .typeString("Hello there, I am Victor Ubere.")
@@ -27,7 +27,8 @@ export default function Details({ className }) {
               autoStart: false,
               cursor: "",
             }}
-          />
+          /> */}
+          Hello there, I am Victor Ubere.
         </h2>
         <p>
           I am a frontend web developer from Nigeria. I am focused on building

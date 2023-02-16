@@ -162,7 +162,7 @@ const projects = [
     tags: ["React.ts", "scss", "Redux"],
   },
   {
-    title: "tetris",
+    title: "Tetris",
     description: "A game of tetris.",
     image: tetrix,
     link: "https://vutetrix.netlify.app/",
@@ -186,12 +186,12 @@ const projects = [
     github: "https://github.com/Vubere/MetabnbHNG",
     tags: ["React.ts", "css"],
   },
-  {
+  /* {
     title: "Calculator",
     description: "A react calculator.",
     image: reactCalc,
     link: "https://vu-calculator-app.netlify.app/",
     github: "https://github.com/Vubere/React-calculator",
     tags: ["React.js", "css"],
-  },
+  }, */
 ];

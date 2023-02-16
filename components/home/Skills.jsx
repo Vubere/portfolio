@@ -64,11 +64,13 @@ export default function Aside({ className }) {
 
 const tools = [
   "HTML5",
-  "CSS/SASS",
+  "CSS",
+  "SASS",
   "Tailwind",
-  "Javascript/TypeScript",
-  "React.js",
-  "Next.js",
+  "Javascript",
+  "TypeScript",
+  "React",
+  "Nextjs",
   "Redux/RTK",
   "Firebase",
   "Git/Github",
