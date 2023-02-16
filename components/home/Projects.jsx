@@ -188,7 +188,7 @@ const projects = [
   },
   {
     title: "Calculator",
-    description: "A react alculator app",
+    description: "A react calculator app",
     image: reactCalc,
     link: "https://vu-calculator-app.netlify.app/",
     github: "https://github.com/Vubere/React-calculator",
