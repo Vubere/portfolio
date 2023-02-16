@@ -48,21 +48,13 @@ export default function header({ show, showSideNav, width, route }) {
       </h1>
       {width > 600 ? (
         <nav>
-          <ul className="flex items-center justify-center gap-4 pr-4 font-[500]">
+          <ul className="flex items-center justify-center gap-6 pr-4 font-[500]">
             <li>
               <Link
                 href={"/"}
                 className={`${currentRoute == "" ? "underline" : ""}`}
               >
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/about"}
-                className={`${currentRoute == "about" ? "underline" : ""}`}
-              >
-                About me
               </Link>
             </li>
             <Link href={"/contact-me"} className="p-0 m-0">

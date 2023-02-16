@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 export default function Aside({ className }) {
   return (
     <aside
-      className={`w-full lg:shadow-[0_2px_0_2px_rgba(0,0,0,0.3)] lg:max-h-[698px] overflow-auto pb-8 ${className}`}
+      className={`skills w-full overflow-auto pb-8 ${className}`}
     >
-      <section className="md:shadow-[0_2px_2px_0_rgba(0,0,0,0.3)] w-full p-6 pt-6">
+      <section className=" w-full p-6 pt-6">
         <h3 className="uppercase font-[700] mb-3">My Skills</h3>
         <motion.ul className="w-full " layout>
           {skills.map((skill, i) => (

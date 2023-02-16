@@ -39,7 +39,7 @@ export default function Layout({ children }) {
           </motion.div>
         ) : null}
       </AnimatePresence>
-      <div className="mt-[70px] lg:h-[698px]">{children}</div>
+      <div className="mt-[70px] ">{children}</div>
     </>
   );
 }

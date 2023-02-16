@@ -17,15 +17,6 @@ export default function SideNav({ setShow, route }) {
             Home
           </Link>
         </li>
-        <li className="text-[22px] mb-3">
-          <Link
-            href={"/about"}
-            onClick={() => setShow(false)}
-            className={`${currentRoute == "about" ? "underline" : ""}`}
-          >
-            About me
-          </Link>
-        </li>
         <Link
           href={"/contact-me"}
           onClick={() => setShow(false)}

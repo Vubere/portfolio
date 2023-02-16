@@ -4,7 +4,7 @@ import hero from "../../assets/hero.png";
 
 export default function Details({ className }) {
   return (
-    <main className={`overflow-auto lg:max-h-[698px] w-full ${className}`}>
+    <main className={`details overflow-auto  w-full ${className}`}>
       <div className="overflow-hidden h-[300px]  flex items-center relative">
         <Image
           src={hero}
@@ -18,14 +18,14 @@ export default function Details({ className }) {
             onInit={(typewriter) => {
               typewriter
                 .typeString("Hello there, I am Victor Ubere.")
-                .changeDelay(0.1).start()
+                .changeDelay(0.1)
+                .start();
             }}
             options={{
               loop: false,
               strings: ["Hello there, I am Victor Ubere"],
               autoStart: false,
               cursor: "",
-              
             }}
           />
         </h2>
@@ -40,9 +40,46 @@ export default function Details({ className }) {
         <p className="font-[700] lg:text-[22px]">
           Let{"'"}s work on your next project
         </p>
-        <p className="underline">Download my resume</p>
-        <span>Send me an email</span> | <span>Twitter</span> |{" "}
-        <span>LinkedIn</span>
+        <a
+          className="underline inline-block"
+          href="https://drive.google.com/file/d/1frYMNANkIFmPGTFWr6vyr63WWqJgGBK9/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View my resume
+        </a>
+        <div>
+          <a href="mailto:victorubere@gmail.com" className="hover:underline">
+            Send me an email
+          </a>{" "}
+          |{" "}
+          <a
+            href="https://twitter.com/VictorUbere"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline"
+          >
+            Twitter
+          </a>{" "}
+          <span className="font-[700] text-[12px]">+</span>{" "}
+          <a
+            className="hover:underline"
+            href="https://www.linkedin.com/in/victor-ubere-381b75110"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>{" "}
+          <span className="font-[700] text-[12px]">+</span>{" "}
+          <a
+            className="hover:underline"
+            href="https://github.com/Vubere"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+        </div>
       </footer>
     </main>
   );

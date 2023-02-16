@@ -2,12 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 ::-webkit-scrollbar {
   display: none;
 }
-*{
+* {
   padding: 0;
   margin: 0;
+  font-family: "Oxygen", sans-serif;
+}
 
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .skills {
+    border-left: 1px solid #0004;
+    max-height: 700px;
+  }
+  .projects {
+    box-shadow: 1px 1px 1px 1px #0004;
+    border-top: 1px solid #0004;
+    display: flex;
+    wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .skills {
+    border-right: 1px solid #0004;
+  }
+  .projects {
+    border-left: 1px solid #0004;
+  }
+  .projects,
+  .details,
+  .skills {
+    height: calc(100vh - 70px);
+  }
 }
