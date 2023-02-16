@@ -176,7 +176,7 @@ const projects = [
     image: willCreator,
     link: "https://will-creator.netlify.app",
     github: "https://github.com/dreiOX/will-creator",
-    tags: ["React, css", "contextAPI"],
+    tags: ["React.js", "css", "contextAPI"],
   },
   {
     title: "MetaBnb",
@@ -184,14 +184,14 @@ const projects = [
     image: metabnb,
     link: "https://vu-metabnb.netlify.app/",
     github: "https://github.com/Vubere/MetabnbHNG",
-    tags: ["React, css"],
+    tags: ["React.ts", "css"],
   },
   {
     title: "Calculator",
-    description: "A react calculator app",
+    description: "A react calculator.",
     image: reactCalc,
     link: "https://vu-calculator-app.netlify.app/",
     github: "https://github.com/Vubere/React-calculator",
-    tags: ["react", "css"],
+    tags: ["React.js", "css"],
   },
 ];
