@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
+import {Red_Rose} from "@next/font/google"
+import { useRouter } from "next/router";
+import { AnimatePresence, motion } from "framer-motion";
+
+import { useCloseOnBlur } from "../../helpers/useCloseonClickAway";
 
 import Header from "./header";
-
 import SideNav from "./sidenav";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRef } from "react";
-import { useCloseOnBlur } from "../../helpers/useCloseonClickAway";
-import { useRouter } from "next/router";
+
+
+const redRose = Red_Rose({display:"swap", weights:[400,500,600,700], subsets:["latin"]})
 
 export default function Layout({ children }) {
   const [width, setWidth] = useState(0);
@@ -24,7 +27,7 @@ export default function Layout({ children }) {
 
 
   return (
-    <>
+    <div className={redRose.className}>
       <Header showSideNav={setShow} show={show} width={width} route={route}/>
       <AnimatePresence>
         {width <= 600 && show ? (
@@ -40,6 +43,6 @@ export default function Layout({ children }) {
         ) : null}
       </AnimatePresence>
       <div className="mt-[70px] ">{children}</div>
-    </>
+    </div>
   );
 }

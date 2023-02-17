@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
 
 ::-webkit-scrollbar {
   display: none;
@@ -9,7 +9,6 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Red Rose", cursive;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
