@@ -32,9 +32,7 @@ export default function Details({ className }) {
         </h2>
         <p>
           I am a frontend web developer from Nigeria. I am focused on building
-          responsive and performant web applications and web sites. My problem
-          solving skill is my best strength and taking up new challenges is a
-          hobby.
+          responsive and performant web applications and web sites. I enjoy solving coding problems and taking up new challenges.
         </p>
       </article>
       <footer className="p-6">
