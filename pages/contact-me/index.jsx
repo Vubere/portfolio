@@ -42,6 +42,7 @@ export default function ContactMe() {
       if (message.length < 2) {
         throw { text: "Please enter a valid message" };
       }
+      console.log(process.env.NEXT_PUBLIC_SERVICE_ID)
       await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
@@ -63,6 +64,7 @@ export default function ContactMe() {
       setEmail("");
       setMessage("");
     } catch (err) {
+      console.log(err)
       setShowLoading(false);
       setStatus(err?.text);
       setTimeout(() => {

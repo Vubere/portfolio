@@ -26,7 +26,6 @@ function Project({ project, index }) {
   const { title, description, image, link, github, tags } = project;
   const { ref, show, setShow } = useCloseOnBlur();
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
-  
 
   const visibilityVariants = {
     show: {
@@ -39,7 +38,7 @@ function Project({ project, index }) {
 
   return (
     <motion.li
-      className="p-5 "
+      className="project "
       initial={{
         opacity: 0,
         scale: 0.7,
@@ -57,7 +56,7 @@ function Project({ project, index }) {
         once: true,
       }}
     >
-      <div className="flex items-center gap-1 mb-10">
+      <div className="flex items-center gap-1 mb-10 p-4">
         <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
           <p className="transform rotate-[-45deg] text-[18px] font-[700]">
             {indexFormat}
@@ -66,19 +65,21 @@ function Project({ project, index }) {
         <hr className="w-[300px] max:w-[70vw] h-0 border  " />
       </div>
       <article>
-        <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
-        <hr className="w-[50%] mb-3" />
-        <p className=" h-[70px]">{description}</p>
-        <div className="relative inline w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px] ">
+        <div className="p-3">
+          <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
+          <hr className="w-[50%] mb-3" />
+          <p className=" h-[70px]">{description}</p>
+        </div>
+        <div className="relative inline w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-full ">
           <Image
             src={image}
             height={300}
             width={250}
             alt={`${title}`}
-            className="max-h-[300px] w-[90vw] max-w-[300px] md:max-w-[400px]  lg:max-w-[250px]"
+            className="max-h-[300px] w-[90vw] max-w-[300px] md:max-w-[400px]  lg:max-w-full"
           />
           <motion.div
-            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-full md:max-w-[400px] sm:max-w-[400px] lg:max-w-[250px]"
+            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-full md:max-w-[400px] sm:max-w-[400px] lg:max-w-full"
             animate={show ? "show" : "hide"}
             whileHover={{
               opacity: 1,
@@ -105,7 +106,7 @@ function Project({ project, index }) {
             </a>
           </motion.div>
         </div>
-        <ul className="flex gap-2 flex-wrap m-2 w-[80%]">
+        <ul className="flex gap-2 flex-wrap m-2 w-[80%] p-2">
           {tags.map((tag, i) => (
             <motion.li
               key={keygen}

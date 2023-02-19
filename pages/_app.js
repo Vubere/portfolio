@@ -47,6 +47,7 @@ function MyApp({ Component, pageProps }) {
               duration: 0.4,
             }}
             variants={variants}
+            className="max-w-[1500px] mx-auto flex flex-col justify-center items-center"
           >
             <Component {...pageProps} />
           </motion.section>

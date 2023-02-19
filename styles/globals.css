@@ -22,6 +22,10 @@
     display: flex;
     wrap: wrap;
   }
+  .projects .project{
+    max-width: 80%;
+    margin: 20px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .skills {

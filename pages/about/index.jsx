@@ -20,7 +20,7 @@ export default function Aside({ className }) {
         <p className=" w-full md:w-[70%]">
           As a frontend developer, I am responsible for building and maintaining
           the client-side of web applications. I am proficient in React,
-          Tailwind, SASS, Firebase, Redux and TypeScript. Have adequate
+          Tailwind, SASS, Firebase, Redux and TypeScript. I have adequate
           knowlegde of vuejs and nextjs, and I am always eager to learn new
           technologies and programming languages. I am skilled in translating
           UI/UX design wireframes into functional and responsive web pages,
