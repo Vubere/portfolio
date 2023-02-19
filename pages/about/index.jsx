@@ -12,7 +12,7 @@ export default function Aside({ className }) {
       <title>About Victor Ubere</title>
     </Head>
       <section className="p-4 lg:p-6 flex flex-col gap-2 max-w-[1300px]">
-        <h2 className="font-[600] text-[22px]">About Me</h2>
+        <h2 className="font-[600] text-[32px]">About Me</h2>
         <p>
           Hi, I am Victor Ubere, a {age}-year-old frontend developer based in
           Nigeria.
