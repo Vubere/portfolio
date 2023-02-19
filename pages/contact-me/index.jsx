@@ -26,12 +26,12 @@ export default function ContactMe() {
       }
       
       
-      const res = await emailjs.send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, {
+      const res = await emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, {
         from_name: name,
         message: message,
         from_email: email,
         reply_to: email,
-      }, process.env.PUBLIC_KEY);
+      }, process.env.NEXT_PUBLIC_KEY);
       alert('Message sent successfully')
       setName("");
       setEmail("");
