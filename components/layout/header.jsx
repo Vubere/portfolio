@@ -8,43 +8,45 @@ export default function header({ show, showSideNav, width, route }) {
     topOpen: {
       height: 5,
       width: 35,
-      rotate: '45deg',
+      rotate: "45deg",
       y: 5,
-      x: -5
+      x: -5,
     },
     topClosed: {
       width: 30,
-      x:0,
+      x: 0,
       height: 5,
     },
     midOpen: {
       opacity: 0,
-      x: 20
+      x: 20,
     },
     midClosed: {
       width: 30,
-      x:0,
+      x: 0,
       height: 5,
     },
-    bottomClosed:{
+    bottomClosed: {
       opacity: 1,
       width: 30,
-      height: 5
+      height: 5,
     },
-    bottomOpened:{
+    bottomOpened: {
       opacity: 1,
       y: -12,
       x: -5,
       width: 35,
       height: 5,
-      rotate: '-45deg'
-    }
+      rotate: "-45deg",
+    },
   };
 
   return (
     <header className="p-3 shadow-[0px_2px_0px_0px_rgba(0,0,0,0.1)] flex justify-between w-full h-[70px] items-center fixed top-0 left-0 bg-white z-[999]">
       <h1 className="font-[600] text-[15px]">
-        Victor Ubere{"  "}|{"  "}Frontend Engineer
+        <Link href={"/"}>
+          Victor Ubere{"  "}|{"  "}Frontend Engineer
+        </Link>
       </h1>
       {width > 600 ? (
         <nav>
@@ -86,7 +88,7 @@ export default function header({ show, showSideNav, width, route }) {
             initial="topClosed"
             animate={!show ? "topClosed" : "topOpen"}
             transition={{
-              type: "spring"
+              type: "spring",
             }}
             variants={variant}
           ></motion.div>
@@ -97,7 +99,7 @@ export default function header({ show, showSideNav, width, route }) {
             transition={{
               duration: 0.2,
               type: "spring",
-              damping: 10
+              damping: 10,
             }}
             variants={variant}
           ></motion.div>
