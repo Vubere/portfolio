@@ -70,8 +70,8 @@ const tools = [
   "Javascript",
   "TypeScript",
   "React",
-  "Nextjs",
   "Redux/RTK",
+  "Jest",
   "Firebase",
   "Git/Github",
 ];
