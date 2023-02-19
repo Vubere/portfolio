@@ -6,6 +6,10 @@ import Head from "next/head";
 import Modal from "../../components/modal";
 import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+
 export default function ContactMe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,6 +32,7 @@ export default function ContactMe() {
 
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    console.log(publicRuntimeConfig.SERVICE_ID)
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -42,17 +47,17 @@ export default function ContactMe() {
       if (message.length < 2) {
         throw { text: "Please enter a valid message" };
       }
-      console.log(process.env.NEXT_PUBLIC_SERVICE_ID)
+      console.log(publicRuntimeConfig.serviceID)
       await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        publicRuntimeConfig.serviceID,
+        publicRuntimeConfig.templateID,
         {
           from_name: name,
           message: message,
           from_email: email,
           reply_to: email,
         },
-        process.env.NEXT_PUBLIC_KEY
+        publicRuntimeConfig.publicKey
       );
       setShowLoading(false);
       setShowSuccess(true);
