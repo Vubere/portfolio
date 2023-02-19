@@ -26,7 +26,7 @@ function Project({ project, index }) {
   const { title, description, image, link, github, tags } = project;
   const { ref, show, setShow } = useCloseOnBlur();
   const indexFormat = index < 9 ? `0${index + 1}` : index + 1;
-  console.log(tags);
+  
 
   const visibilityVariants = {
     show: {
