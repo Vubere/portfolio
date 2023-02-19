@@ -1,7 +1,7 @@
 import { useState, keygen } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useCloseOnBlur } from "../../helpers/useCloseonClickAway";
+import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 
 /* image */
 import tetrix from "../../assets/tetrix.png";
@@ -137,8 +137,7 @@ function Project({ project, index }) {
 const projects = [
   {
     title: "Twitter Clone",
-    description:
-      "A twitter clone for mobile phones.",
+    description: "A twitter clone for mobile phones.",
     image: twitterClone,
     link: "https://vu-witter.netlify.app/",
     github: "https://www.github.com/vubere/vwitter",
@@ -146,8 +145,7 @@ const projects = [
   },
   {
     title: "Numle",
-    description:
-      "A wordle clone but number guessing instead.",
+    description: "A wordle clone but number guessing instead.",
     image: numle,
     link: "https://numle.netlify.app/",
     github: "https://www.github.com/vubere/numle",

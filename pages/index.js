@@ -13,11 +13,6 @@ export default function Home() {
     >
       <Head>
         <title>Victor Ubere</title>
-        <meta
-          name="description"
-          content="Victor Ubere's portfolio. Victor is a frontend web developer with knowledge in html5, css, tailwind, javascript, typescript, react, redux, nextjs "
-        />
-        
       </Head>
 
       <Skills className="order-2  lg:order-1 md:order-2 " />

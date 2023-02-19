@@ -2,21 +2,37 @@ import Head from "next/head";
 import { useState } from "react";
 
 export default function ContactMe() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault()
-    setEmail('')
-    setMessage('')
-  }
+    e.preventDefault();
+    try {
+      const emailPattern =
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (name.length < 2) {
+        throw "Please enter a valid name";
+      }
+      if (!emailPattern.test(email)) {
+        throw "Please enter a valid email address";
+      }
+      if (message.length < 2) {
+        throw "Please enter a valid message";
+      }
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      alert(err);
+      return;
+    }
+  };
 
   return (
     <>
       <Head>
-        <title>Contact VUbere</title>
+        <title>Contact Victor Ubere</title>
       </Head>
       <section className="flex  flex-col items-center justify-center p-4">
         <h2 className="font-[600] text-[22px]">Contact Me</h2>
@@ -32,7 +48,6 @@ export default function ContactMe() {
             onChange={({ target }) => setName(target.value)}
             placeholder="John Doe"
             className="border border-[#0007] w-[90%] rounded-[3px] p-2 m-2 placeholder:text-[#0009] placeholder:text-[14px] focus:outline-none focus:ring-1 focus:ring-[#0008]"
-            required
           />
           <input
             name="email"
@@ -42,16 +57,20 @@ export default function ContactMe() {
             onChange={({ target }) => setEmail(target.value)}
             placeholder="johndoe@email.com"
             className="border border-[#0007] w-[90%] rounded-[3px] p-2 m-2 placeholder:text-[#0009] placeholder:text-[14px] focus:outline-none focus:ring-1 focus:ring-[#0008]"
-            required
           />
           <textarea
             value={message}
             placeholder="Your message..."
             className="border border-[#0007] text-[14px] w-[90%] rounded-[3px] p-2 m-2 placeholder:text-[#0009] placeholder:text-[12px] focus:outline-none focus:ring-1 focus:ring-[#0008] resize-none h-[100px] p-3"
             onChange={({ target }) => setMessage(target.value)}
-            required
+          
           />
-          <button type="submit" className="px-4 py-1 border rounded-[3px] bg-[#66f6] hover:bg-[#66f] text-white">Send</button>
+          <button
+            type="submit"
+            className="px-4 py-1 border rounded-[3px] bg-[#66f6] hover:bg-[#66f] text-white"
+          >
+            Send
+          </button>
         </form>
       </section>
     </>
