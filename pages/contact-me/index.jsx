@@ -32,7 +32,7 @@ export default function ContactMe() {
 
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    console.log(publicRuntimeConfig.SERVICE_ID)
+  
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ export default function ContactMe() {
       if (message.length < 2) {
         throw { text: "Please enter a valid message" };
       }
-      console.log(publicRuntimeConfig.serviceID)
+      
       await emailjs.send(
         publicRuntimeConfig.serviceID,
         publicRuntimeConfig.templateID,
@@ -69,7 +69,7 @@ export default function ContactMe() {
       setEmail("");
       setMessage("");
     } catch (err) {
-      console.log(err)
+      
       setShowLoading(false);
       setStatus(err?.text);
       setTimeout(() => {
