@@ -6,11 +6,9 @@ import Head from "next/head";
 import Modal from "../../components/modal";
 import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 
-const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
-const key = process.env.NEXT_PUBLIC_KEY;
 
-export default function ContactMe() {
+
+export default function ContactMe({templateID, serviceID, publicKey}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -36,6 +34,8 @@ export default function ContactMe() {
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+  console.log(templateID, serviceID, publicKey)
+
   const submitHandler = async (e) => {
     e.preventDefault();
     setShowLoading(true);
@@ -59,7 +59,7 @@ export default function ContactMe() {
           from_email: email,
           reply_to: email,
         },
-        key
+        publicKey
       );
       setShowLoading(false);
       setShowSuccess(true);
@@ -154,4 +154,14 @@ export default function ContactMe() {
       </section>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+  const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_KEY;
+  return {
+    props: {templateID, serviceID, publicKey},
+  };
 }
