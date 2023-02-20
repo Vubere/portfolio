@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  publicRuntimeConfig: {
+  env: {
     staticFolder: "/static",
-    publicKey: process.env.PUBLIC_KEY,
-    serviceID: process.env.SERVICE_ID,
-    templateID: process.env.TEMPLATE_ID,
+    NEXT_PUBLIC_KEY: process.env.NEXT_PUBLIC_KEY,
+    NEXT_PUBLIC_SERVICE_ID: process.env.NEXT_PUBLIC_SERVICE_ID,
+    NEXT_PUBLIC_TEMPLATE_ID: process.env.NEXT_PUBLIC_TEMPLATE_ID,
   }
 }
 
