@@ -34,7 +34,7 @@ export default function ContactMe({templateID, serviceID, publicKey}) {
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  console.log(templateID, serviceID, publicKey)
+
 
   const submitHandler = async (e) => {
     e.preventDefault();

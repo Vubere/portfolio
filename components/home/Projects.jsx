@@ -1,4 +1,3 @@
-import { useState, keygen } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
@@ -9,7 +8,7 @@ import movie from "../../assets/movinime.png";
 import numle from "../../assets/numle.png";
 import twitterClone from "../../assets/twitterClone.png";
 import metabnb from "../../assets/metabnb.png";
-import reactCalc from "../../assets/reactCalc.png";
+
 import willCreator from "../../assets/willCreator.png";
 
 export default function Projects({ className }) {
@@ -38,7 +37,7 @@ function Project({ project, index }) {
 
   return (
     <motion.li
-      className="project "
+      className="pt-5 px-4 lg:px-0 md:px-4"
       initial={{
         opacity: 0,
         scale: 0.7,
@@ -56,30 +55,30 @@ function Project({ project, index }) {
         once: true,
       }}
     >
-      <div className="flex items-center gap-1 mb-10 p-4">
+      <div className="flex items-center gap-1 mb-2 py-3 md:px-4 px-2 md:max-w-[340px]">
         <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
           <p className="transform rotate-[-45deg] text-[18px] font-[700]">
             {indexFormat}
           </p>
         </div>
-        <hr className="w-[300px] max:w-[70vw] h-0 border  " />
+        <hr className="w-[80%] max-w-[280px] border border-[#0005] max:w-[70vw] h-0 border  " />
       </div>
       <article>
-        <div className="p-3">
-          <h4 className="font-[600] text-[28px] mb-4">{title}</h4>
-          <hr className="w-[50%] mb-3" />
-          <p className=" h-[70px]">{description}</p>
+        <div className="md:px-3 ">
+          <h4 className="font-[600] text-[28px] mb-1">{title}</h4>
+          <hr className="w-[50%] mb-2 border-top border-[#0005]" />
+          <p className="lg:h-auto md:h-[70px] h-[70px]">{description}</p>
         </div>
-        <div className="relative inline max-h-[300px] w-[90vw] p-3 max-w-[300px] md:max-w-[400px]  lg:max-w-full ">
+        <div className="relative  max-h-[300px] w-[90vw] max-w-[400px] py-3 md:max-w-[400px]  lg:max-w-full lg:m-0  lg:px-0 ml:pl-4">
           <Image
             src={image}
             height={300}
             width={250}
             alt={`${title}`}
-            className="img max-h-[300px] w-full max-w-[400px]"
+            className="img h-full max-h-[300px] lg:w-full md:w-[90%] w-[90%]"
           />
           <motion.div
-            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-full"
+            className="div absolute top-3 left-0  bg-[#fff8] flex items-center justify-center gap-2 md:w-[90%] w-[90%] h-[100%] lg:w-full "
             animate={show ? "show" : "hide"}
             whileHover={{
               opacity: 1,
@@ -109,7 +108,7 @@ function Project({ project, index }) {
         <ul className="flex gap-2 flex-wrap m-2 w-[80%] p-2">
           {tags.map((tag, i) => (
             <motion.li
-              key={keygen}
+              key={i + "" + link}
               initial={{
                 opacity: 0,
                 x: 0,
