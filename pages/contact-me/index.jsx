@@ -29,6 +29,9 @@ export default function ContactMe() {
 
   const emailPattern =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const templateID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+  const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID;
+  const key = process.env.NEXT_PUBLIC_KEY;
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -43,17 +46,17 @@ export default function ContactMe() {
       if (message.length < 2) {
         throw { text: "Please enter a valid message" };
       }
-      console.log(process.env.NEXT_PUBLIC_SERVICE_ID)
+     
       await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        serviceID,
+        templateID,
         {
           from_name: name,
           message: message,
           from_email: email,
           reply_to: email,
         },
-        process.env.NEXT_PUBLIC_KEY
+        key
       );
       setShowLoading(false);
       setShowSuccess(true);
