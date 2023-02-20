@@ -70,16 +70,16 @@ function Project({ project, index }) {
           <hr className="w-[50%] mb-3" />
           <p className=" h-[70px]">{description}</p>
         </div>
-        <div className="relative inline w-[90vw] md:max-w-[400px] sm:max-w-[400px] lg:max-w-full ">
+        <div className="relative inline max-h-[300px] w-[90vw] p-3 max-w-[300px] md:max-w-[400px]  lg:max-w-full ">
           <Image
             src={image}
             height={300}
             width={250}
             alt={`${title}`}
-            className="max-h-[300px] w-[90vw] max-w-[300px] md:max-w-[400px]  lg:max-w-full"
+            className="img max-h-[300px] w-full max-w-[400px]"
           />
           <motion.div
-            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-full md:max-w-[400px] sm:max-w-[400px] lg:max-w-full"
+            className="absolute top-0 left-0  h-full bg-[#fff8] flex items-center justify-center gap-2 max-h-[300px] w-full"
             animate={show ? "show" : "hide"}
             whileHover={{
               opacity: 1,

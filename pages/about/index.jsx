@@ -8,9 +8,9 @@ export default function Aside({ className }) {
 
   return (
     <>
-    <Head>
-      <title>About Victor Ubere</title>
-    </Head>
+      <Head>
+        <title>About Victor Ubere</title>
+      </Head>
       <section className="p-4 lg:p-6 flex flex-col gap-2 max-w-[1300px]">
         <h2 className="font-[600] text-[32px]">About Me</h2>
         <p>
@@ -51,7 +51,12 @@ export default function Aside({ className }) {
           too:
           <ul className="p-2 pl-6">
             <li className="list-disc">
-              <a href="https://twitter.com/VictorUbere" className="text-[#00f]">
+              <a
+                href="https://twitter.com/VictorUbere"
+                className="text-[#00f]"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Twitter
               </a>
             </li>
@@ -59,12 +64,19 @@ export default function Aside({ className }) {
               <a
                 href="https://www.linkedin.com/in/victor-ubere-381b75110"
                 className="text-[#00f]"
+                target="_blank"
+                rel="noreferrer"
               >
                 LinkedIn
               </a>
             </li>
             <li className="list-disc">
-              <a href="https://github.com/Vubere" className="text-[#00f]">
+              <a
+                href="https://github.com/Vubere"
+                className="text-[#00f]"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Github
               </a>
             </li>

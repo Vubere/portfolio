@@ -10,6 +10,17 @@
   padding: 0;
   margin: 0;
 }
+@media screen and (max-width: 600px){
+  .project:{
+    padding-left: 10px;
+
+  }
+  .project .img{
+    margin: 0 10px;
+    width: 90vw;
+    max-width: 400px;
+  }
+}
 
 @media screen and (min-width: 600px) and (max-width: 1023px) {
   .skills {
@@ -34,6 +45,7 @@
   .projects {
     border-left: 1px solid #0004;
   }
+  
   .projects,
   .details,
   .skills {
