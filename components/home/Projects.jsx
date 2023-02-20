@@ -141,7 +141,7 @@ const projects = [
     image: twitterClone,
     link: "https://vu-witter.netlify.app/",
     github: "https://www.github.com/vubere/vwitter",
-    tags: ["React.ts", "TypeScript", "Tailwind", "Firebase", "contextAPI"],
+    tags: ["React.ts", "Tailwind", "Firebase", "contextAPI"],
   },
   {
     title: "Numle",
