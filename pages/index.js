@@ -3,7 +3,7 @@ import Head from "next/head";
 import Details from "../components/home/Details";
 import Skills from "../components/home/Skills";
 import Projects from "../components/home/Projects";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (

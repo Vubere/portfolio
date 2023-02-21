@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Red_Rose } from "@next/font/google";
+import { EB_Garamond } from "@next/font/google";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -8,7 +8,7 @@ import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 import Header from "./header";
 import SideNav from "./sidenav";
 
-const redRose = Red_Rose({
+const ebGaramond = EB_Garamond({
   display: "swap",
   weights: [400, 500, 600, 700],
   subsets: ["latin"],
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className={redRose.className}>
+    <div className={ebGaramond.className}>
       <Header showSideNav={setShow} show={show} width={width} route={route} />
       <AnimatePresence>
         {width <= 600 && show ? (
