@@ -56,17 +56,17 @@ function Project({ project, index }) {
       }}
     >
       <div className="flex items-center gap-1 mb-2 py-3 md:px-4 px-2 md:max-w-[340px]">
-        <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border-black shadow-[0_0_0_2px_rgba(0,0,0,0.3)] transform rotate-45 flex items-center justify-center bg-white">
+        <div className="w-[30px] max-w-[30px] min-w-[30px] h-[30px] max-h-[30px] min-h-[30px] border border-[#000] shadow-[0_0_1px_1px_rgba(0,0,0)] transform rotate-45 flex items-center justify-center bg-white">
           <p className="transform rotate-[-45deg] text-[18px] font-[700]">
             {indexFormat}
           </p>
         </div>
-        <hr className="w-[80%] max-w-[280px] border border-[#0005] max:w-[70vw] h-0 border  " />
+        <hr className="w-[80%]  max-w-[280px]   lg:w-[130%] lg:max-w-full border border-[#000] h-0 border  " />
       </div>
       <article>
         <div className="md:px-3 ">
           <h4 className="font-[600] text-[28px] mb-1">{title}</h4>
-          <hr className="w-[50%] mb-2 border-top border-[#0005]" />
+          <hr className="w-[50%] mb-2 border-top border-[#000]" />
           <p className="lg:h-auto md:h-[70px] h-[70px]">{description}</p>
         </div>
         <div className="relative  max-h-[300px] w-[90vw] max-w-[400px] py-3 md:max-w-[400px]  lg:max-w-full lg:m-0  lg:px-0 ml:pl-4">

@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
+/* images */
+import exlink from "../../assets/exlink.png"
 
 export default function Aside({ className }) {
   const date = new Date();
@@ -58,6 +61,15 @@ export default function Aside({ className }) {
                 rel="noreferrer"
               >
                 Twitter
+                <sup>
+                  <Image
+                    src={exlink}
+                    width={10}
+                    height={10}
+                    alt="view resume"
+                    className="inline"
+                  />
+                </sup>
               </a>
             </li>
             <li className="list-disc">
@@ -68,6 +80,15 @@ export default function Aside({ className }) {
                 rel="noreferrer"
               >
                 LinkedIn
+                <sup>
+                  <Image
+                    src={exlink}
+                    width={10}
+                    height={10}
+                    alt="view resume"
+                    className="inline"
+                  />
+                </sup>
               </a>
             </li>
             <li className="list-disc">
@@ -78,6 +99,15 @@ export default function Aside({ className }) {
                 rel="noreferrer"
               >
                 Github
+                <sup>
+                  <Image
+                    src={exlink}
+                    width={10}
+                    height={10}
+                    alt="view resume"
+                    className="inline"
+                  />
+                </sup>
               </a>
             </li>
           </ul>

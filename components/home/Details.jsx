@@ -1,6 +1,10 @@
 import Image from "next/image";
-import TypewriterComponent from "typewriter-effect";
+/* import TypewriterComponent from "typewriter-effect"; */
+/* images */
 import hero from "../../assets/hero.png";
+import exlink from "../../assets/exlink.png"
+import eye from "../../assets/eye.png"
+import mailSend from "../../assets/mailSend.png"
 
 export default function Details({ className }) {
   return (
@@ -40,16 +44,22 @@ export default function Details({ className }) {
           Let{"'"}s work on your next project
         </p>
         <a
-          className="underline inline-block"
+          className="underline inline-block h-[16px]"
           href="https://drive.google.com/file/d/1frYMNANkIFmPGTFWr6vyr63WWqJgGBK9/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
           View my resume
+          <sup>
+            <Image src={eye} width={10} height={10} alt="view resume" className="inline"/>
+          </sup>
         </a>
         <div>
           <a href="mailto:victorubere@gmail.com" className="hover:underline">
             Send me an email
+          <sup>
+            <Image src={mailSend} width={10} height={10} alt="view resume" className="inline"/>
+          </sup>
           </a>{" "}
           |{" "}
           <a
@@ -59,6 +69,9 @@ export default function Details({ className }) {
             className="hover:underline"
           >
             Twitter
+          <sup>
+            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
+          </sup>
           </a>{" "}
           <span className="font-[700] text-[12px]">+</span>{" "}
           <a
@@ -68,6 +81,9 @@ export default function Details({ className }) {
             rel="noreferrer"
           >
             LinkedIn
+          <sup>
+            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
+          </sup>
           </a>{" "}
           <span className="font-[700] text-[12px]">+</span>{" "}
           <a
@@ -77,6 +93,9 @@ export default function Details({ className }) {
             rel="noreferrer"
           >
             Github
+          <sup>
+            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
+          </sup>
           </a>
         </div>
       </footer>

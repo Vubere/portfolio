@@ -69,7 +69,7 @@ export default function header({ show, showSideNav, width, route }) {
             </li>
             <Link href={"/contact-me"} className="p-0 m-0">
               <li
-                className={`border rounded-full p-2 pl-3 pr-3 flex items-center shadow-[1px_2px_3px_2px_rgba(0,0,0,0.8)] h-[30px] ${
+                className={`border rounded-full p-2 pl-3 pr-3 flex items-center shadow-[1px_2px_3px_2px_rgba(0,0,0)] h-[30px] ${
                   currentRoute == "contact-me" ? "underline" : ""
                 }`}
               >
