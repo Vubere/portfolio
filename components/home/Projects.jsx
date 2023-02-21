@@ -145,7 +145,7 @@ const projects = [
   },
   {
     title: "Numle",
-    description: "A wordle clone but number guessing instead.",
+    description: "A number guessing game(wordle clone).",
     image: numle,
     link: "https://numle.netlify.app/",
     github: "https://www.github.com/vubere/numle",
