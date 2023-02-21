@@ -35,8 +35,7 @@ export default function Details({ className }) {
           Hello there, I am Victor Ubere.
         </h2>
         <p>
-          I am a frontend web developer from Nigeria. I am focused on building
-          responsive and performant web applications and web sites. I enjoy solving coding problems and taking up new challenges.
+          I am a frontend web developer focused on building responsive and performant web applications and web sites. I enjoy solving coding problems and taking up new challenges.
         </p>
       </article>
       <footer className="p-6">

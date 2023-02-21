@@ -36,22 +36,21 @@ export default function Aside({ className }) {
         </p>
         <p className="w-full md:w-[70%]">
           In addition to my work as a frontend developer, I am an avid chess
-          player. I love the strategic challenge of the game, and often finds
+          player. I love the strategic challenge of the game, and I find
           inspiration in its emphasis on planning, analysis, and forward
           thinking. When I am not coding or playing chess, I enjoy spending time
-          with family and friends.
+          with my family and friends.
         </p>
         <p className="w-full md:w-[70%]">
           I am currently available for hire. If you are interested in working
-          with me, please feel free to contact me via email at
+          with me, please contact me via email at
           <a href="mailto:victorubere@gmail.com" className="hover:underline ">
             {" "}
             victorubere@gmail.com.
           </a>
         </p>
         <p>
-          You can find me on the following platforms. Feel free to reach out
-          too:
+         I am also available on the following platforms:
           <ul className="p-2 pl-6">
             <li className="list-disc">
               <a
