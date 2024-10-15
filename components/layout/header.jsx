@@ -80,7 +80,7 @@ export default function header({ show, showSideNav, width, route }) {
         </nav>
       ) : (
         <div
-          className="relative w-[30px] h-[20px] flex flex-col gap-1"
+          className="relative w-[30px] h-[20px] flex flex-col gap-1 cursor-pointer"
           onClick={() => showSideNav(!show)}
         >
           <motion.div

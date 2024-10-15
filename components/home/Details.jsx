@@ -2,9 +2,10 @@ import Image from "next/image";
 /* import TypewriterComponent from "typewriter-effect"; */
 /* images */
 import hero from "../../assets/hero.png";
-import exlink from "../../assets/exlink.png"
-import eye from "../../assets/eye.png"
-import mailSend from "../../assets/mailSend.png"
+import exlink from "../../assets/exlink.png";
+import eye from "../../assets/eye.png";
+import mailSend from "../../assets/mailSend.png";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Details({ className }) {
   return (
@@ -18,11 +19,11 @@ export default function Details({ className }) {
       </div>
       <article className="p-6">
         <h2 className="font-[700] text-[38px] leading-[48px] lg:text-[58px] leading-[60px] md:text-[48px] md:leading-[50px] mb-4">
-          {/* <TypewriterComponent
+          <TypewriterComponent
             onInit={(typewriter) => {
               typewriter
                 .typeString("Hello there, I am Victor Ubere.")
-                .changeDelay(0.1)
+                .changeDelay(0.01)
                 .start();
             }}
             options={{
@@ -31,11 +32,13 @@ export default function Details({ className }) {
               autoStart: false,
               cursor: "",
             }}
-          /> */}
-          Hello there, I am Victor Ubere.
+          />
+          {/* Hello there, I am Victor Ubere. */}
         </h2>
         <p>
-          I am a frontend web developer focused on building responsive and performant web applications and web sites. I enjoy solving coding problems and taking up new challenges.
+          I am a frontend web developer focused on building responsive and
+          performant web applications and web sites. I enjoy solving coding
+          problems and taking up new challenges.
         </p>
       </article>
       <footer className="p-6">
@@ -44,21 +47,33 @@ export default function Details({ className }) {
         </p>
         <a
           className="underline inline-block h-[16px]"
-          href="https://drive.google.com/file/d/1frYMNANkIFmPGTFWr6vyr63WWqJgGBK9/view?usp=sharing"
+          href="https://drive.google.com/file/d/1qKlUV8AdNtVo7SZ_ZAmgrdFZVPlnMN3u/view?usp=drive_link"
           target="_blank"
           rel="noreferrer"
         >
           View my resume
           <sup>
-            <Image src={eye} width={10} height={10} alt="view resume" className="inline"/>
+            <Image
+              src={eye}
+              width={10}
+              height={10}
+              alt="view resume"
+              className="inline"
+            />
           </sup>
         </a>
         <div>
           <a href="mailto:victorubere@gmail.com" className="hover:underline">
             Send me an email
-          <sup>
-            <Image src={mailSend} width={10} height={10} alt="view resume" className="inline"/>
-          </sup>
+            <sup>
+              <Image
+                src={mailSend}
+                width={10}
+                height={10}
+                alt="email"
+                className="inline"
+              />
+            </sup>
           </a>{" "}
           |{" "}
           <a
@@ -68,9 +83,15 @@ export default function Details({ className }) {
             className="hover:underline"
           >
             Twitter
-          <sup>
-            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
-          </sup>
+            <sup>
+              <Image
+                src={exlink}
+                width={10}
+                height={10}
+                alt="twitter"
+                className="inline"
+              />
+            </sup>
           </a>{" "}
           <span className="font-[700] text-[12px]">+</span>{" "}
           <a
@@ -80,9 +101,15 @@ export default function Details({ className }) {
             rel="noreferrer"
           >
             LinkedIn
-          <sup>
-            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
-          </sup>
+            <sup>
+              <Image
+                src={exlink}
+                width={10}
+                height={10}
+                alt="linkedin"
+                className="inline"
+              />
+            </sup>
           </a>{" "}
           <span className="font-[700] text-[12px]">+</span>{" "}
           <a
@@ -92,9 +119,15 @@ export default function Details({ className }) {
             rel="noreferrer"
           >
             Github
-          <sup>
-            <Image src={exlink} width={10} height={10} alt="view resume" className="inline"/>
-          </sup>
+            <sup>
+              <Image
+                src={exlink}
+                width={10}
+                height={10}
+                alt="git"
+                className="inline"
+              />
+            </sup>
           </a>
         </div>
       </footer>

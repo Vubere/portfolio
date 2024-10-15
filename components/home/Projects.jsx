@@ -6,7 +6,7 @@ import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 import tetrix from "../../assets/tetrix.png";
 import movie from "../../assets/movinime.png";
 import numle from "../../assets/numle.png";
-import twitterClone from "../../assets/twitterClone.png";
+import collections from "../../assets/collections.jpeg";
 import metabnb from "../../assets/metabnb.png";
 
 import willCreator from "../../assets/willCreator.png";
@@ -70,15 +70,17 @@ function Project({ project, index }) {
           <p className="lg:h-auto md:h-[70px] h-[70px]">{description}</p>
         </div>
         <div className="relative  max-h-[300px] w-[90vw] max-w-[400px] py-3 md:max-w-[400px]  lg:max-w-full lg:m-0  lg:px-0 ml:pl-4">
-          <Image
-            src={image}
-            height={300}
-            width={250}
-            alt={`${title}`}
-            className="img h-full max-h-[300px] lg:w-full md:w-[90%] w-[90%]"
-          />
+          <div className="relative h-[200px] w-[400px] max-w-[100%] overflow-hidden">
+            <Image
+              src={image}
+              fill
+              objectFit="cover"
+              objectPosition="center"
+              alt={`${title}`}
+            />
+          </div>
           <motion.div
-            className="div absolute top-3 left-0  bg-[#fff8] flex items-center justify-center gap-2 md:w-[90%] w-[90%] h-[100%] lg:w-full "
+            className="div absolute top-3 left-0  bg-[#fff8] flex items-center justify-center gap-2 md:w-[100%] w-[100%] h-[100%] lg:w-full "
             animate={show ? "show" : "hide"}
             whileHover={{
               opacity: 1,
@@ -136,12 +138,19 @@ function Project({ project, index }) {
 
 const projects = [
   {
-    title: "Twitter Clone",
-    description: "A twitter clone for mobile phones.",
-    image: twitterClone,
-    link: "https://vu-witter.netlify.app/",
-    github: "https://www.github.com/vubere/vwitter",
-    tags: ["React.ts", "Tailwind", "Firebase", "contextAPI"],
+    title: "Collections",
+    description: "A social blogging platform.",
+    image: collections,
+    link: "https://vu-collections.vercel.app/",
+    github: "https://github.com/Vubere/Post",
+    tags: [
+      "Next.js",
+      "Tailwind",
+      "Express.js",
+      "MongoDB",
+      "Redux Toolkit",
+      "RTK Query",
+    ],
   },
   {
     title: "Numle",
@@ -149,7 +158,7 @@ const projects = [
     image: numle,
     link: "https://numle.netlify.app/",
     github: "https://www.github.com/vubere/numle",
-    tags: ["React.js", "Redux", "scss"],
+    tags: ["React.js", "Redux", "SCSS"],
   },
   {
     title: "Movie App",
@@ -157,7 +166,7 @@ const projects = [
     image: movie,
     link: "https://movinime.netlify.app/",
     github: "https://www.github.com/vubere/movie-app",
-    tags: ["React.ts", "scss", "Redux"],
+    tags: ["React.ts", "SCSS", "Redux"],
   },
   {
     title: "Tetris",
@@ -165,7 +174,7 @@ const projects = [
     image: tetrix,
     link: "https://vutetrix.netlify.app/",
     github: "https://www.github.com/vubere/tetris",
-    tags: ["JavaScript", "css"],
+    tags: ["JavaScript", "CSS"],
   },
   {
     title: "WillCreator",
@@ -174,7 +183,7 @@ const projects = [
     image: willCreator,
     link: "https://will-creator.netlify.app",
     github: "https://github.com/dreiOX/will-creator",
-    tags: ["React.js", "css", "contextAPI"],
+    tags: ["React.js", "CSS", "React Context API"],
   },
   {
     title: "MetaBnb",
@@ -182,7 +191,7 @@ const projects = [
     image: metabnb,
     link: "https://vu-metabnb.netlify.app/",
     github: "https://github.com/Vubere/MetabnbHNG",
-    tags: ["React.ts", "css"],
+    tags: ["React.ts", "CSS"],
   },
   /* {
     title: "Calculator",
