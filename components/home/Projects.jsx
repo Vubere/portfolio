@@ -5,6 +5,7 @@ import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 /* image */
 import tetrix from "../../assets/tetrix.png";
 import movie from "../../assets/movinime.png";
+import basicDashboard from "../../assets/basicDashboard.jpeg";
 import numle from "../../assets/numle.png";
 import collections from "../../assets/collections.jpeg";
 import metabnb from "../../assets/metabnb.png";
@@ -145,6 +146,7 @@ const projects = [
     github: "https://github.com/Vubere/Post",
     tags: [
       "Next.js",
+      "TypeScript",
       "Tailwind",
       "Express.js",
       "MongoDB",
@@ -161,12 +163,12 @@ const projects = [
     tags: ["React.js", "Redux", "SCSS"],
   },
   {
-    title: "Movie App",
-    description: "A movie app.",
-    image: movie,
-    link: "https://movinime.netlify.app/",
-    github: "https://www.github.com/vubere/movie-app",
-    tags: ["React.ts", "SCSS", "Redux"],
+    title: "Basic Dashboard",
+    description: "A basic dashboard showing data in tiles and charts.",
+    image: basicDashboard,
+    link: "https://vu-basic-dashboard.vercel.app/",
+    github: "https://github.com/vubere/basic-dashboard",
+    tags: ["React.js", "Tailwind", "TypeScript", "Chartjs"],
   },
   {
     title: "Tetris",
