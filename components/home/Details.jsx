@@ -47,7 +47,7 @@ export default function Details({ className }) {
         </p>
         <a
           className="underline inline-block h-[16px]"
-          href="https://drive.google.com/file/d/1qKlUV8AdNtVo7SZ_ZAmgrdFZVPlnMN3u/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1uGrH2Hfn-3uq06_szeFJFdt3zdh7UQc7/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >

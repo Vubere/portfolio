@@ -26,15 +26,23 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/logo.png" />
-        <meta name="author" content="Victor Ubere" />
-        <meta
-          name="keywords"
-          content="Victor Ubere, Victor, Ubere, frontend, web developer, html, html5, css, css3, javascript, react, sass, redux, nextjs, tailwind, typescript, portfolio, projects, skills, details, about, contact, victorubere.com, victorubere, victorubere.com"
-        />
+        <title>Victor Ubere | Software Developer</title>
         <meta
           name="description"
-          content="Victor Ubere is a frontend web developer based in Owerri, Nigeria. He is proficient in HTML, CSS, Javascript, React, Redux, Tailwind, Typescript, and Sass."
+          content="Victor Ubere is a Nigeria-based software developer specializing in building scalable web applications with React, Next.js, and modern backend technologies."
         />
+        <meta
+          name="keywords"
+          content="Victor Ubere, Software Developer, Full Stack Developer, React Developer, Next.js Developer, Web Developer Nigeria"
+        />
+        <meta property="og:title" content="Victor Ubere | Software Developer" />
+        <meta
+          property="og:description"
+          content="Portfolio of Victor Ubere, a Nigeria-based software developer focused on modern, scalable web applications."
+        />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Layout>
         <AnimatePresence mode="wait">
