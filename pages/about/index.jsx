@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 /* images */
-import exlink from "../../assets/exlink.png"
+import exlink from "../../assets/exlink.png";
 
 export default function Aside({ className }) {
   const date = new Date();
@@ -20,27 +20,29 @@ export default function Aside({ className }) {
           Hi, I am Victor Ubere, a {age}-year-old frontend developer based in
           Nigeria.
         </p>
-        <p className=" w-full md:w-[70%]">
-          As a frontend developer, I am responsible for building and maintaining
-          the client-side of web applications. I am proficient in React,
-          Tailwind, SASS, Firebase, Redux and TypeScript. I have adequate
-          knowlegde of vuejs and nextjs, and I am always eager to learn new
-          technologies and programming languages. I am skilled in translating
-          UI/UX design wireframes into functional and responsive web pages,
-          ensuring that the website is optimized for speed, accessibility, and
-          user experience. Additionally, I am familiar with modern software
-          development practices such as version control, automated testing, and
-          continuous integration. I am passionate about creating elegant and
-          user-friendly web experiences, and I am always looking for ways to
-          improve my skills and deliver the best results for my clients.
-        </p>
         <p className="w-full md:w-[70%]">
-          In addition to my work as a frontend developer, I am an avid chess
-          player. I love the strategic challenge of the game, and I find
-          inspiration in its emphasis on planning, analysis, and forward
-          thinking. When I am not coding or playing chess, I enjoy spending time
-          with my family and friends.
+          As a software developer, I specialize primarily in frontend
+          development, where I build performant, accessible, and user-focused
+          web applications. I am highly proficient in React, TypeScript,
+          Tailwind CSS, SASS, Redux, and Firebase, with strong experience
+          translating UI/UX wireframes into responsive and intuitive interfaces
+          optimized for speed and usability. In addition, I have an adequate
+          skill set in backend development, working with Node.js (Express and
+          NestJS), Go (Golang), and databases such as MySQL and MongoDB. While
+          my core strength remains on the frontend, this broader full-stack
+          exposure allows me to collaborate effectively across the stack and
+          build more complete, scalable solutions.
         </p>
+
+        <p className="w-full md:w-[70%]">
+          I am comfortable with modern software development practices including
+          version control, automated testing, and continuous integration. Beyond
+          development, I am an avid chess player who enjoys the strategic depth
+          of the game and draws inspiration from its emphasis on planning,
+          analysis, and forward thinking. When I am not coding or playing chess,
+          I enjoy spending time with my family and friends.
+        </p>
+
         <p className="w-full md:w-[70%]">
           I am currently available for hire. If you are interested in working
           with me, please contact me via email at
@@ -50,7 +52,7 @@ export default function Aside({ className }) {
           </a>
         </p>
         <p>
-         I am also available on the following platforms:
+          I am also available on the following platforms:
           <ul className="p-2 pl-6">
             <li className="list-disc">
               <a

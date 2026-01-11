@@ -4,10 +4,10 @@ import { useCloseOnBlur } from "../../hooks/useCloseonClickAway";
 
 /* image */
 import tetrix from "../../assets/tetrix.png";
-import movie from "../../assets/movinime.png";
 import basicDashboard from "../../assets/basicDashboard.jpeg";
 import numle from "../../assets/numle.png";
 import collections from "../../assets/collections.jpeg";
+import shutterstoreng from "../../assets/shutterstoreng.png";
 import metabnb from "../../assets/metabnb.png";
 
 import willCreator from "../../assets/willCreator.png";
@@ -62,7 +62,7 @@ function Project({ project, index }) {
             {indexFormat}
           </p>
         </div>
-        <hr className="w-[80%]  max-w-[280px]   lg:w-[130%] lg:max-w-full border border-[#000] h-0 border  " />
+        <hr className="w-[80%]  max-w-[280px]   lg:w-[130%] lg:max-w-full border border-[#000] h-0  " />
       </div>
       <article>
         <div className="md:px-3 ">
@@ -98,14 +98,16 @@ function Project({ project, index }) {
             >
               Visit
             </a>
-            <a
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-              className="border p-4 py-1 bg-white font-[500] shadow-[1px_1px_1px_1px_rgba(0,0,0,0.3)] rounded-full underline"
-            >
-              Github
-            </a>
+            {github && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                className="border p-4 py-1 bg-white font-[500] shadow-[1px_1px_1px_1px_rgba(0,0,0,0.3)] rounded-full underline"
+              >
+                Github
+              </a>
+            )}
           </motion.div>
         </div>
         <ul className="flex gap-2 flex-wrap m-2 w-[80%] p-2">
@@ -139,6 +141,21 @@ function Project({ project, index }) {
 
 const projects = [
   {
+    title: "ShutterStoreNG",
+    description: "A multi-vendor online store.",
+    image: shutterstoreng,
+    link: "https://shutterstoreng.com/",
+    github: "",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Golang",
+      "MySQL",
+      "Redux Toolkit",
+    ],
+  },
+  {
     title: "Collections",
     description: "A social blogging platform.",
     image: collections,
@@ -155,14 +172,6 @@ const projects = [
     ],
   },
   {
-    title: "Numle",
-    description: "A number guessing game(wordle clone).",
-    image: numle,
-    link: "https://numle.netlify.app/",
-    github: "https://www.github.com/vubere/numle",
-    tags: ["React.js", "Redux", "SCSS"],
-  },
-  {
     title: "Basic Dashboard",
     description: "A basic dashboard showing data in tiles and charts.",
     image: basicDashboard,
@@ -170,6 +179,15 @@ const projects = [
     github: "https://github.com/vubere/basic-dashboard",
     tags: ["React.js", "Tailwind", "TypeScript", "Chartjs"],
   },
+  {
+    title: "Numle",
+    description: "A number guessing game(wordle clone).",
+    image: numle,
+    link: "https://numle.netlify.app/",
+    github: "https://www.github.com/vubere/numle",
+    tags: ["React.js", "Redux", "SCSS"],
+  },
+
   {
     title: "Tetris",
     description: "A game of tetris.",
